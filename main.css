@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  --ReactBlue: rgba(116, 227, 255, 0.849);
+  --ReactBlueFade: rgba(116, 227, 255, 0.329);
+}
+
+/* ----------------------------------------------------------- */
+
+.Quiz {
+  text-align: center;
+}
+
+.Quiz-logo {
+  height: 7vh;
+  pointer-events: none;
+  opacity: 0.2;
+  margin-right: 2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Quiz-logo {
+    animation: Quiz-logo-spin infinite 20s linear;
+  }
+}
+
+.Quiz-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.Quiz-home-btn {
+  color: var(--ReactBlueFade);
+  background-color: none;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+.Quiz-home-btn:hover,
+.Quiz-home-btn:focus {
+  text-decoration: underline;
+  color: var(--ReactBlue);
+}
+
+@keyframes Quiz-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Quiz-main {
+  height: 80vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.Quiz-answers {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------------------------------------------------- */
+
+.startcard-main {
+  color: var(--ReactBlue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.startcard-header {
+  padding-bottom: 0.5rem;
+  font-size: 4rem;
+}
+.startcard-msg {
+  color: var(--ReactBlueFade);
+}
+
+.startcard-input {
+  width: 15rem;
+  height: 2rem;
+  color: var(--ReactBlue);
+  background-color: #282c34;
+  text-align: center;
+  display: block;
+  margin: 2rem auto 1rem;
+}
+.startcard-input:hover {
+  border-color: var(--ReactBlue);
+}
+.startcard-topic {
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+}
+.startcard-btn {
+  background-color: #282c34;
+  color: var(--ReactBlue);
+  padding: 0.5rem;
+  width: 6rem;
+  display: block;
+  margin: auto;
+}
+.startcard-btn:hover {
+  border-color: var(--ReactBlue);
+}
+
+/* ----------------------------------------------------------- */
+
+.gamecard-main {
+  height: 45vh;
+  background-color: #000000ea;
+  background-image: url("./logo.svg");
+  background-size: 40px;
+  background-blend-mode: overlay;
+  display: flex;
+  color: white;
+  font-size: smaller;
+  border-bottom: 1px solid var(--ReactBlueFade);
+}
+
+.gamecard-question {
+  color: var(--ReactBlue);
+  max-width: 700px;
+  margin: auto;
+  padding: 4rem 2rem 1rem;
+}
+
+/* ------------------------------- */
+
+.answers-main {
+  border: 1px solid var(--ReactBlueFade);
+  margin: 0.3rem;
+  cursor: pointer;
+  display: flex;
+}
+.answers-btn {
+  width: 7rem;
+  margin: 0.2rem;
+  color: var(--ReactBlueFade);
+  background-color: #282c34;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 3px solid;
+  cursor: pointer;
+}
+.answers-btn:hover {
+  color: var(--ReactBlue);
+}
+.Quiz-answers-container {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Quiz-nxt-btn-container {
+  display: flex;
+  justify-content: center;
+}
+.Quiz-next-btn {
+  color: var(--ReactBlue);
+  background-color: rgb(0, 0, 0);
+  border: 1px solid var(--ReactBlueFade);
+  margin: 1rem;
+  padding: 0.3rem 1rem;
+  display: block;
+  cursor: pointer;
+}
+.Quiz-next-btn:hover {
+  border-color: var(--ReactBlue);
+}
+
+/* --------------------------------------------------- */
+
+.Scoreboard-main {
+  height: 80vh;
+  background-color: #000000da;
+  background-image: url("./logo.svg");
+  background-size: 40px;
+  background-blend-mode: overlay;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.Scoreboard-header {
+  color: var(--ReactBlue);
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+.Scoreboard-grid {
+  min-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-top: 1px solid var(--ReactBlue);
+  border-bottom: 1px solid var(--ReactBlue);
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+  color: var(--ReactBlue);
+  background-color: black;
+}
+.Scoreboard-grid-title {
+  background-color: black;
+  padding: 0.5rem;
+}
+.Scoreboard-btns {
+  display: flex;
+  justify-content: center;
+}
+.Scoreboard-replay,
+.Scoreboard-delete {
+  width: 10rem;
+  color: var(--ReactBlue);
+  background-color: rgb(0, 0, 0);
+  border: 1px solid var(--ReactBlueFade);
+  margin: 1rem;
+  display: block;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+.Scoreboard-replay:hover {
+  border-color: var(--ReactBlue);
+}
+.Scoreboard-delete:hover {
+  border-color: var(--ReactBlue);
+}
+
+
+.Quiz-footer {
+  height: 10vh;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ReactBlueFade);
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Quiz-footer-btn {
+  background: transparent;
+  color: white;
+  margin: 2rem;
+  border: none;
+}
+.Quiz-footer-logo {
+  height: 3rem;
+  opacity: 0.8;
+  filter: invert(48%) saturate(07%) brightness(95%) contrast(80%);
+}
+.Quiz-footer-logo:hover,
+.Quiz-footer-logo:focus {
+  opacity: 1;
+  filter: brightness(200%);
+}
